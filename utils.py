@@ -6,6 +6,6 @@ def get_random_word():
     lista = []
     for n in lines:
         linea = n.strip()
-        if linea.isalpha():
+        if linea:
             lista.append(linea)
     return random.choice(lista)
