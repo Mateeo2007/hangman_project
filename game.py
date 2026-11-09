@@ -26,5 +26,6 @@ class HangmanGame:
             self.guessed_letters.append(letter)
             return True
         else:
+            self.guessed_letters.append(letter)
             self.errors += 1
             return False
