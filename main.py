@@ -2,8 +2,8 @@
 # -*- coding: cp1252 -*-
 """
 Codigo principal del juego,
-aca� �se ejecuta lo que va a ver el usuio, se define
-la funcio�n que obtiene letras valids y
+acá se ejecuta lo que va a ver el usuario, se define
+la función que obtiene letras válidas y
 importa el resto de funciones para poder
 ejecutar el juego correctamente.
 """
@@ -16,16 +16,16 @@ def obtener_letra_valida(letras_adivinadas):
         letra = input("Ingresá una letra: ").strip().lower()
 
         if len(letra) != 1:
-            print("Error: Tene�s que ingresar una sola letra.")
+            print("Error: Tenés que ingresar una sola letra.")
         elif not letra.isalpha():
             print("Error: El ingreso debe ser una letra.")
         elif letra in letras_adivinadas:
-            print("Ya ingresaste esa letra. Proba� con otra.")
+            print("Ya ingresaste esa letra. Probá con otra.")
         else:
             return letra
 
 
-def main():  # esta es la funci�n principal, aca ejecuta el juego
+def main():  # esta es la función principal, acá ejecuta el juego
     palabrajuego = get_random_word()
 
     juego = HangmanGame(palabrajuego)
