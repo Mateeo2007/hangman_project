@@ -20,3 +20,10 @@ class HangmanGame:
                 progress.append("_")
 
         return " ".join(progress)
+    def process_guess(self, letter): #tarea 4
+        if letter in self.word:
+            self.guessed_letters.append(letter) # si la letra est√°en la palabra, la a√ade a las letras adivinadas y retorna true, si no, suma un error y retorna falso.
+            return True
+        else:
+            self.errors += 1
+            return False
