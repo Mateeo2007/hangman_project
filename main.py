@@ -2,8 +2,8 @@
 # -*- coding: cp1252 -*-
 """
 Codigo principal del juego,
-acaÃ ¡se ejecuta lo que va a ver el usuio, se define
-la funcioÃn que obtiene letras valids y
+acaï¿½ ï¿½se ejecuta lo que va a ver el usuio, se define
+la funcioï¿½n que obtiene letras valids y
 importa el resto de funciones para poder
 ejecutar el juego correctamente.
 """
@@ -13,26 +13,26 @@ from game import HangmanGame  # tarea 5
 
 def obtener_letra_valida(letras_adivinadas):
     while True:
-        letra = input("Ingresa¡ una letra: ").strip().lower()
+        letra = input("IngresÃ¡ una letra: ").strip().lower()
 
         if len(letra) != 1:
-            print("Error: Tene©s que ingresar una sola letra.")
+            print("Error: Teneï¿½s que ingresar una sola letra.")
         elif not letra.isalpha():
             print("Error: El ingreso debe ser una letra.")
         elif letra in letras_adivinadas:
-            print("Ya ingresaste esa letra. Proba¡ con otra.")
+            print("Ya ingresaste esa letra. Probaï¿½ con otra.")
         else:
             return letra
 
 
-def main():  # esta es la funciÃn principal, aca ejecuta el juego
+def main():  # esta es la funciï¿½n principal, aca ejecuta el juego
     palabrajuego = get_random_word()
 
     juego = HangmanGame(palabrajuego)
 
     print("Juego del ahorcado.")
 
-    while juego.errors < juego.max_errors:
+    while not juego.is_won() and not juego.is_lost():
 
         print("Progreso: ", juego.display_progress())
 
@@ -49,6 +49,11 @@ def main():  # esta es la funciÃn principal, aca ejecuta el juego
             print(f"Correcto, la letra '{letra}' existe en la palabra")
         else:
             print(f"Incorrecto, la letra '{letra}' no existe en la palabra")
+
+    if juego.is_won():
+        print("Â¡Ganaste!")
+    else:
+        print("Fin del juego")
 
 
 if __name__ == "__main__":
