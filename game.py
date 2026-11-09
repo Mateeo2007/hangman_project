@@ -22,7 +22,7 @@ class HangmanGame:
         return " ".join(progress)
 
     def process_guess(self, letter):  # tarea 4
-        if letter in self.word:
+    if letter.lower() in self.word.lower():
             self.guessed_letters.append(letter)
             return True
         else:
