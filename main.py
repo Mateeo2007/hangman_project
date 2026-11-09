@@ -2,8 +2,8 @@
 # -*- coding: cp1252 -*-
 """
 Codigo principal del juego,
-acaÃ ¡se ejecuta lo que va a ver el usuaro, se dene
-la funcioÃn que obtiene letras valida
+acaÃ ¡se ejecuta lo que va a ver el usuio, se define
+la funcioÃn que obtiene letras valids y
 importa el resto de funciones para poder
 ejecutar el juego correctamente.
 """
