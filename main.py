@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: cp1252 -*-
+# -*- coding: utf-8 -*-
 """
 Codigo principal del juego,
 acá se ejecuta lo que va a ver el usuario, se define
