@@ -10,3 +10,7 @@
 	game.py: contiene las reglas, los intentos y las condiciones de victoria o derrota.
 	utils.py: selecciona aleatoriamente una película.
 	wordlist.txt: contiene los títulos disponibles.
+## Ejecución
+	Para iniciar el juego, ejecutar desde la terminal:
+
+	python3 main.py
